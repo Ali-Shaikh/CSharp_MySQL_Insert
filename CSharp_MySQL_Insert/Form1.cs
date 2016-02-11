@@ -17,15 +17,6 @@ namespace CSharp_MySQL_Insert
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -37,6 +28,11 @@ namespace CSharp_MySQL_Insert
             {
                 MessageBox.Show(ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtBoxName.Text = txtBoxEmail.Text = txtBoxDesignation.Text = string.Empty;
         }
     }
 }

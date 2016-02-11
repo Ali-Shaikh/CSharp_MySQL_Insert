@@ -84,7 +84,6 @@
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Email ID:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -108,7 +107,6 @@
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(329, 20);
             this.txtBoxEmail.TabIndex = 4;
-            this.txtBoxEmail.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtBoxDesignation
             // 
@@ -137,6 +135,7 @@
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // Form1
             // 
