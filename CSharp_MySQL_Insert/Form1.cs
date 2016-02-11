@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace CSharp_MySQL_Insert
 {
@@ -17,12 +18,22 @@ namespace CSharp_MySQL_Insert
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtBoxFName.Select();
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("", conn))
+                    {
 
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -32,7 +43,9 @@ namespace CSharp_MySQL_Insert
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            txtBoxName.Text = txtBoxEmail.Text = txtBoxDesignation.Text = string.Empty;
+            txtBoxFName.Text = txtBoxLName.Text = txtBoxEmail.Text = string.Empty;
         }
+
+        
     }
 }
