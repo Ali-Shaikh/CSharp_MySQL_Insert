@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConnect = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
@@ -42,28 +42,29 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBoxMobile = new System.Windows.Forms.TextBox();
-            this.txtBoxGender = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.txtBoxCourse = new System.Windows.Forms.TextBox();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnConnect
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 26);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Connect to MySQL";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnConnect.Location = new System.Drawing.Point(12, 12);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(129, 26);
+            this.btnConnect.TabIndex = 0;
+            this.btnConnect.Text = "Connect to MySQL";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnMySQLConnect_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBoxGender);
             this.groupBox1.Controls.Add(this.txtBoxCourse);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtBoxGender);
             this.groupBox1.Controls.Add(this.txtBoxMobile);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -164,7 +165,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 163);
+            this.label5.Location = new System.Drawing.Point(29, 164);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 7;
@@ -177,13 +178,6 @@
             this.txtBoxMobile.Size = new System.Drawing.Size(329, 20);
             this.txtBoxMobile.TabIndex = 8;
             // 
-            // txtBoxGender
-            // 
-            this.txtBoxGender.Location = new System.Drawing.Point(94, 133);
-            this.txtBoxGender.Name = "txtBoxGender";
-            this.txtBoxGender.Size = new System.Drawing.Size(329, 20);
-            this.txtBoxGender.TabIndex = 9;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -195,10 +189,22 @@
             // 
             // txtBoxCourse
             // 
-            this.txtBoxCourse.Location = new System.Drawing.Point(94, 159);
+            this.txtBoxCourse.Location = new System.Drawing.Point(94, 160);
             this.txtBoxCourse.Name = "txtBoxCourse";
             this.txtBoxCourse.Size = new System.Drawing.Size(329, 20);
             this.txtBoxCourse.TabIndex = 11;
+            // 
+            // comboBoxGender
+            // 
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Items.AddRange(new object[] {
+            "Select",
+            "Male",
+            "Female"});
+            this.comboBoxGender.Location = new System.Drawing.Point(94, 133);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(329, 21);
+            this.comboBoxGender.TabIndex = 12;
             // 
             // Form1
             // 
@@ -206,7 +212,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 416);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConnect);
             this.Name = "Form1";
             this.Text = "MySQL Insert";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -219,7 +225,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxEmail;
@@ -230,12 +236,12 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtBoxGender;
         private System.Windows.Forms.TextBox txtBoxMobile;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBoxCourse;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.ComboBox comboBoxGender;
     }
 }
 
