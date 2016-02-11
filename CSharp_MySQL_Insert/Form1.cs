@@ -65,7 +65,11 @@ namespace CSharp_MySQL_Insert
                 {
                     string FName = txtBoxFName.Text;
                     string LName = txtBoxLName.Text;
-                    if (FName == "" || LName == "")
+                    string Email = txtBoxEmail.Text;
+                    string Mobile = txtBoxMobile.Text;
+                    string Course = txtBoxCourse.Text;
+                    string Gender = comboBoxGender.Text;
+                    if (FName == "" || LName == "" || Email == "" || Mobile == "" || Course == "" || Gender == "Select Gender")
                     {
                         MessageBox.Show("Empty Fields Detected ! Please fill up all the fields");
                         return;

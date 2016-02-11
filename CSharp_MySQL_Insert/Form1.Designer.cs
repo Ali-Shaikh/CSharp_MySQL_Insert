@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.btnConnect = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
+            this.txtBoxCourse = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBoxMobile = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
@@ -39,13 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtBoxMobile = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.txtBoxCourse = new System.Windows.Forms.TextBox();
-            this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -78,18 +78,71 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(453, 360);
+            this.groupBox1.Size = new System.Drawing.Size(453, 242);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insert Record into Database";
             // 
+            // comboBoxGender
+            // 
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Items.AddRange(new object[] {
+            "Select Gender",
+            "Male",
+            "Female"});
+            this.comboBoxGender.Location = new System.Drawing.Point(94, 133);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(329, 21);
+            this.comboBoxGender.TabIndex = 7;
+            // 
+            // txtBoxCourse
+            // 
+            this.txtBoxCourse.Location = new System.Drawing.Point(94, 160);
+            this.txtBoxCourse.Name = "txtBoxCourse";
+            this.txtBoxCourse.Size = new System.Drawing.Size(329, 20);
+            this.txtBoxCourse.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 137);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Gender:";
+            // 
+            // txtBoxMobile
+            // 
+            this.txtBoxMobile.Location = new System.Drawing.Point(94, 81);
+            this.txtBoxMobile.Name = "txtBoxMobile";
+            this.txtBoxMobile.Size = new System.Drawing.Size(329, 20);
+            this.txtBoxMobile.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 164);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Course:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Mobile No:";
+            // 
             // btnSave
             // 
             this.btnSave.AutoSize = true;
-            this.btnSave.Location = new System.Drawing.Point(267, 331);
+            this.btnSave.Location = new System.Drawing.Point(267, 209);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -97,10 +150,10 @@
             // btnReset
             // 
             this.btnReset.AutoSize = true;
-            this.btnReset.Location = new System.Drawing.Point(348, 331);
+            this.btnReset.Location = new System.Drawing.Point(348, 209);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
-            this.btnReset.TabIndex = 3;
+            this.btnReset.TabIndex = 10;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
@@ -110,7 +163,7 @@
             this.txtBoxEmail.Location = new System.Drawing.Point(94, 107);
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(329, 20);
-            this.txtBoxEmail.TabIndex = 5;
+            this.txtBoxEmail.TabIndex = 6;
             // 
             // txtBoxLName
             // 
@@ -153,64 +206,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Mobile No:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 164);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Course:";
-            // 
-            // txtBoxMobile
-            // 
-            this.txtBoxMobile.Location = new System.Drawing.Point(94, 81);
-            this.txtBoxMobile.Name = "txtBoxMobile";
-            this.txtBoxMobile.Size = new System.Drawing.Size(329, 20);
-            this.txtBoxMobile.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 137);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Gender:";
-            // 
-            // txtBoxCourse
-            // 
-            this.txtBoxCourse.Location = new System.Drawing.Point(94, 160);
-            this.txtBoxCourse.Name = "txtBoxCourse";
-            this.txtBoxCourse.Size = new System.Drawing.Size(329, 20);
-            this.txtBoxCourse.TabIndex = 11;
-            // 
-            // comboBoxGender
-            // 
-            this.comboBoxGender.FormattingEnabled = true;
-            this.comboBoxGender.Items.AddRange(new object[] {
-            "Select",
-            "Male",
-            "Female"});
-            this.comboBoxGender.Location = new System.Drawing.Point(94, 133);
-            this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(329, 21);
-            this.comboBoxGender.TabIndex = 12;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 416);
+            this.ClientSize = new System.Drawing.Size(477, 298);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnConnect);
             this.Name = "Form1";
